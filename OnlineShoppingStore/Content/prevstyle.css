@@ -1,0 +1,165 @@
+﻿#wrapper {
+    font-family: tahoma;
+}
+
+.footer-body {
+    color: black
+}
+
+.container {
+    width: 100% !important;
+    padding-left:0px !important;
+    padding-right:0px!important;
+    margin: 0 auto;
+}
+
+#subheader {
+    width: 100%;
+    height: 30px;
+    background: SlateBlue;
+    color: #fff;
+    margin-top: -15px;
+}
+
+    #subheader p {
+        float: left;
+        margin-top: 7px;
+    }
+
+    #subheader a {
+        float: right;
+        line-height: 30px;
+        color: #fff;
+        text-decoration: none;
+        margin-left: 30px;
+    }
+
+#main-header {
+    width: 100%;
+    height: 100px;
+    background: DodgerBlue;
+    float: left;
+    margin-top: -15px;
+}
+
+#logo {
+    width: 250px;
+    margin-top: 10px;
+    float: left;
+}
+
+#ist {
+    color: black;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: cursive;
+}
+
+#iist {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+#search {
+    width: 650px;
+    float: left;
+    padding: 20px;
+    margin-left: 50px;
+}
+
+.search-area {
+    width: 650px;
+    height: 50px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    float: left;
+    padding-left: 15px;
+}
+
+.search-btn {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background: yellow;
+    margin-left: -102px;
+}
+
+#navigation {
+    width: 100%;
+    height: 35px;
+    background: DodgerBlue;
+    float: left;
+    margin-top: -15px;
+    box-shadow: 10px 14px 50px 2px DodgerBlue;
+}
+
+nav {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+    nav a {
+        margin-left: 35px;
+        color: white;
+        text-decoration: none;
+    }
+        /*for transaction of nav btn*/
+        nav a:hover {
+            color: #000;
+            transition: all .5s;
+        }
+
+#slider {
+    width: 100%;
+    max-width: 100%;
+    float: left;
+}
+
+#headblock {
+    width: 100%;
+    height: auto;
+    float: left;
+    font-size: 22px;
+    color: DodgerBlue;
+}
+
+    #headblock h2 {
+        line-height: 35px;
+        border-left: 20px solid DodgerBlue;
+        padding-left: 10px;
+    }
+
+.catbox {
+    width: 275px;
+    height: 300px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+   // margin: 0 40 100 0;
+}
+
+    .catbox span {
+        width: 92%;
+        height: 35px;
+        line-height: 35px;
+        background: rgba(0,0,0,0.4);
+        color: white;
+        display: block;
+        bottom: 30px;
+        position: absolute;
+        z-index: 999;
+        text-align: center;
+    }
+
+    .catbox:hover span {
+        color: DodgerBlue;
+    }
+
+body {
+}

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ecommerceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_admin">
+    <Key>
+      <PropertyRef Name="ad_id" />
+    </Key>
+    <Property Name="ad_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad_email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ad_password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ad_phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_product_category">
+    <Key>
+      <PropertyRef Name="cat_id" />
+    </Key>
+    <Property Name="cat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cat_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_product_items">
+    <Key>
+      <PropertyRef Name="pro_id" />
+    </Key>
+    <Property Name="pro_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pro_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="pro_posted_date" Type="date" />
+    <Property Name="pro_price" Type="float" />
+    <Property Name="pro_status" Type="int" />
+    <Property Name="pro_image" Type="nvarchar(max)" />
+    <Property Name="pro_fk_ad" Type="int" />
+    <Property Name="pro_fk_cat" Type="int" />
+  </EntityType>
+  <Association Name="FK__tbl_produ__pro_f__3F466844">
+    <End Role="tbl_admin" Type="Self.tbl_admin" Multiplicity="0..1" />
+    <End Role="tbl_product_items" Type="Self.tbl_product_items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_admin">
+        <PropertyRef Name="ad_id" />
+      </Principal>
+      <Dependent Role="tbl_product_items">
+        <PropertyRef Name="pro_fk_ad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_produ__pro_f__403A8C7D">
+    <End Role="tbl_product_category" Type="Self.tbl_product_category" Multiplicity="0..1" />
+    <End Role="tbl_product_items" Type="Self.tbl_product_items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_product_category">
+        <PropertyRef Name="cat_id" />
+      </Principal>
+      <Dependent Role="tbl_product_items">
+        <PropertyRef Name="pro_fk_cat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ecommerceModelStoreContainer">
+    <EntitySet Name="tbl_admin" EntityType="Self.tbl_admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_product_category" EntityType="Self.tbl_product_category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_product_items" EntityType="Self.tbl_product_items" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__tbl_produ__pro_f__3F466844" Association="Self.FK__tbl_produ__pro_f__3F466844">
+      <End Role="tbl_admin" EntitySet="tbl_admin" />
+      <End Role="tbl_product_items" EntitySet="tbl_product_items" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_produ__pro_f__403A8C7D" Association="Self.FK__tbl_produ__pro_f__403A8C7D">
+      <End Role="tbl_product_category" EntitySet="tbl_product_category" />
+      <End Role="tbl_product_items" EntitySet="tbl_product_items" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

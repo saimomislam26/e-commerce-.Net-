@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Products</h2>
+
+@for (int i = 0; i < Model.Rows.Count; i++)
+{
+    <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+
+        <div class="thumbnail product-item" style="height:300px">
+
+            <img class="img-responsive" title="Click to View Product detail"
+                 style="cursor:pointer;height:160px;width:100%"
+                 src="~/ProductImg/@Model.Rows[i][6]" />
+
+            <div class="caption">
+                <h5>@Model.Rows[i][2]</h5>
+                <p>@Model.Rows[i][5]</p>
+
+                <p>@Model.Rows[i][7]</p>
+
+            </div>
+            <button class="main-btn" onclick="location.href='@Url.Action("AddtoCart", "Home")?id='+@(Model.Rows[i][0]) ">Add To Cart</button>
+
+        </div>
+
+    </div>
+
+    
+    }

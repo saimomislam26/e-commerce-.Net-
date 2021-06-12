@@ -1,0 +1,51 @@
+﻿
+@*@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/Categorylayout.cshtml";
+}*@
+
+@using OnlineShoppingStore.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Login Form</title>
+</head>
+<body>
+    <div class="wrap">
+        <form class="login-form" action="Login">
+            <div class="form-header">
+                <h3>Login Form</h3>
+                <p>Login to access your dashboard</p>
+            </div>
+            <!--Email Input-->
+            <div class="form-group">
+                <input name="email" type="text" class="form-input" placeholder="email@example.com">
+            </div>
+            <!--Password Input-->
+            <div class="form-group">
+                <input name="pass" type="password" class="form-input" placeholder="password">
+            </div>
+            <!--Login Button-->
+            <div class="form-group">
+                <button name="log_sub" value="clicked" class="form-button" type="submit">Log In</button>
+            </div>
+            <div class="form-footer">
+                Don't have an account? <a href="/Account/Register">Sign Up</a>
+            </div>
+        </form>
+    </div><!--/.wrap-->
+</body>
+</html>
+
+<div class="footer">
+    <p>© 2017  Master  Login form. All Rights Reserved | Design by  <a href="https://w3layouts.com/">  w3layouts </a></p>
+</div>
+</div>
+

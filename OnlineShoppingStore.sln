@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShoppingStore", "OnlineShoppingStore\OnlineShoppingStore.csproj", "{975D9AF4-A815-43DB-B67F-590166EAEB2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomCss", "CustomCss", "{75C5BBB8-441D-4AE9-922C-380414D9CB46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductImg", "ProductImg", "{BEE51080-09FD-4C80-9CE4-151EFB3B7D26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{1BC332CB-0BB4-4FF9-9209-DC86B3295414}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{975D9AF4-A815-43DB-B67F-590166EAEB2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{975D9AF4-A815-43DB-B67F-590166EAEB2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{975D9AF4-A815-43DB-B67F-590166EAEB2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{975D9AF4-A815-43DB-B67F-590166EAEB2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B33C977-BC40-45BA-8601-5B43A43363A0}
+	EndGlobalSection
+EndGlobal

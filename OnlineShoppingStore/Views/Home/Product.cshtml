@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_myadminlayout.cshtml";
+}
+
+<h2>Product</h2>
+
+
+
+
+@for (int i = 0; i < Model.Rows.Count; i++)
+{
+      int count = 1;
+    <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+
+        <div class="thumbnail product-item" style="height:300px">
+
+            <img class="img-responsive" title="Click to View Product detail"
+                 style="cursor:pointer;height:160px;width:100%"
+                 src="~/ProductImg/@Model.Rows[i][6]" />
+
+            <div class="caption">
+                <h5>@Model.Rows[i][2]</h5>
+                <p>@Model.Rows[i][5]</p>
+
+                <p>@Model.Rows[i][7]</p>
+
+            </div>
+        </div>
+
+    </div>
+  
+    <tr>
+        <td>@count</td>
+        <td>@Model.Rows[i][2]</td>
+        <td>@Model.Rows[i][5]</td>
+        @*<td><a href="@Url.Action("Edit,"MyAdmin",new{@productID=@Model.Rows[i][0]})>Edit</a></td> *@
+
+        <td><a href="/MyAdmin/Edit/@Model.Rows[i][0]">Edit</a></td>
+    </tr>
+    count++;
+}
+

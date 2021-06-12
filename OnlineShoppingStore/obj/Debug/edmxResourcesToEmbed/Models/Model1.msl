@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ecommerceModelStoreContainer" CdmEntityContainer="ecommerceEntities">
+    <EntitySetMapping Name="tbl_admin">
+      <EntityTypeMapping TypeName="ecommerceModel.tbl_admin">
+        <MappingFragment StoreEntitySet="tbl_admin">
+          <ScalarProperty Name="ad_id" ColumnName="ad_id" />
+          <ScalarProperty Name="ad_email" ColumnName="ad_email" />
+          <ScalarProperty Name="ad_password" ColumnName="ad_password" />
+          <ScalarProperty Name="ad_phone" ColumnName="ad_phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_product_category">
+      <EntityTypeMapping TypeName="ecommerceModel.tbl_product_category">
+        <MappingFragment StoreEntitySet="tbl_product_category">
+          <ScalarProperty Name="cat_id" ColumnName="cat_id" />
+          <ScalarProperty Name="cat_name" ColumnName="cat_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_product_items">
+      <EntityTypeMapping TypeName="ecommerceModel.tbl_product_items">
+        <MappingFragment StoreEntitySet="tbl_product_items">
+          <ScalarProperty Name="pro_id" ColumnName="pro_id" />
+          <ScalarProperty Name="pro_name" ColumnName="pro_name" />
+          <ScalarProperty Name="pro_posted_date" ColumnName="pro_posted_date" />
+          <ScalarProperty Name="pro_price" ColumnName="pro_price" />
+          <ScalarProperty Name="pro_status" ColumnName="pro_status" />
+          <ScalarProperty Name="pro_image" ColumnName="pro_image" />
+          <ScalarProperty Name="pro_fk_ad" ColumnName="pro_fk_ad" />
+          <ScalarProperty Name="pro_fk_cat" ColumnName="pro_fk_cat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
